@@ -9,7 +9,7 @@ $conn = sqlsrv_connect($serverName, $connectionOptions);
 if (!$conn) {            
   die("Error connection: ".sqlsrv_errors());        
 }        
-echo "DB SERVER:CONNECTED!!" ;
+echo "DB SERVER:CONNECTED !" ;
 
 $tsql= "SELECT * FROM [dbo].[restaurant]";        
 $getResults= sqlsrv_query($conn, $tsql);                           
@@ -24,7 +24,9 @@ echo "<table border='1'>";
          echo "<td>". $row['restaurant_name'] ."</td>";            
          echo "<td>". $row['restaurant_address'] . "</td>";           
          echo "<td>". $row['restaurant_phone'] . "</td>";             
-         echo "</tr>";         }        sqlsrv_free_stmt($getResults); 
+         echo "</tr>";         
+       }        
 echo "</table>";
+sqlsrv_free_stmt($getResults); 
 ?> 
  
