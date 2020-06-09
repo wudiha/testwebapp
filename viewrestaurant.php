@@ -6,7 +6,7 @@ $connectionOptions = array(
   "PWD" => "lingjiayee98!");                       
 //Establishes the connection       
 $conn = sqlsrv_connect($serverName, $connectionOptions);         
-if (!$conn) {            die("Error connection: ".sqlsrv_errors());        }               
+if (!$conn) {            die("Error connection: ".sqlsrv_errors());        }   else{ echo "TEST";}            
 $tsql= "SELECT * FROM [dbo].[restaurant]";        
 $getResults= sqlsrv_query($conn, $tsql);                           
 if ($getResults == FALSE)  {             die(sqlsrv_errors());   }                          
