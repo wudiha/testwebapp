@@ -12,3 +12,4 @@
   }
   echo "DB Server: Connected!";
 }   
+?>
