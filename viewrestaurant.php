@@ -9,7 +9,7 @@ $conn = sqlsrv_connect($serverName, $connectionOptions);
 if (!$conn) {            
   die("Error connection: ".sqlsrv_errors());        
 }        
-echo "DB SERVER:CONNECTED.." ;
+echo "DB SERVER:CONNECTED!!" ;
 
 $tsql= "SELECT * FROM [dbo].[restaurant]";        
 $getResults= sqlsrv_query($conn, $tsql);                           
